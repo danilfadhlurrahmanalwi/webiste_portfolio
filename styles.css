@@ -1,0 +1,409 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Parkinsans", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #202020; /* Warna latar belakang secara keseluruhan */
+    
+}
+
+.page {
+    display: none;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Gaya untuk halaman selamat datang */
+#welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.welcome-content {
+    display: flex;
+    color: white; /* warna pada tulisan di halaman selamat datang */
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Animasi heartbeat */
+.heartbeat {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+    font-family: 'Parkinsans', cursive;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    20%, 60% {
+        transform: scale(1.1);
+    }
+    40%, 80% {
+        transform: scale(0.9);
+    }
+}
+
+#welcome-page button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #5700bb; /* warna pada box di halaman selamat datang */
+    color: white; /* warna pada tulisan di halaman selamat datang */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#welcome-page button:hover {
+    background-color: #ffa200;
+}
+
+/* Gaya untuk halaman utama */
+.hidden {
+    display: none;
+}
+
+/* Gaya untuk navbar tetap */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #DAA520;
+    opacity: 0.8;
+    z-index: 1000;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ffd100;
+}
+
+#About_Me .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Jarak antara gambar dan teks */
+}
+
+.text-content {
+    flex: 1; /* Memberikan ruang lebih untuk teks */
+    text-align: left;
+    padding: 10px;
+}
+
+.image-content {
+    flex: 1; /* Memberikan ruang yang sama dengan teks untuk gambar */
+    text-align: center;
+}
+
+.birthday-image {
+    max-width: 50%; /* Gambar akan disesuaikan dengan ukuran container */
+    height: auto;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    box-shadow: 0 0 8px 4px #fff824; /* Efek bayangan */
+    transition: box-shadow 0.3s ease;
+}
+
+.birthday-image:hover {
+    box-shadow: 0 0 15px 6px #ffee23; /* Efek bayangan saat di-hover */
+}
+
+
+
+/* Gaya tambahan untuk halaman utama */
+header {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    padding: 50px 0;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan untuk kontras dengan teks */
+    display: inline-block;
+    padding: 20px;
+}
+
+header p {
+    margin-top: 0.2em;
+}
+
+nav {
+    background-color: #000000;
+    padding: 1em;
+    text-align: right;
+    animation: fadeIn 2s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-shadow: 
+        1px 1px 0 #ffffff, 
+        1px -1px 0 #000000,
+
+}
+
+nav ul li a:hover {
+    background-color: #f70000;
+    color: rgb(0, 0, 0);
+}
+
+section {
+    padding: 2em;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+
+.feature-box, .testimonial-box, .media-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature, .testimonial, .media {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+    width: 55%;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+h2 {
+    font-family: 'Parkinsans', cursive; /* Sesuaikan dengan font yang diinginkan */
+    font-size: 2em; /* Sesuaikan ukuran font jika diperlukan */
+    margin: 0;
+    padding: 10px 0;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    text-shadow: 
+        1px 1px 0 #ffffff, 
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff; /* Kerangka teks dengan bayangan */
+}
+
+/* Untuk elemen yang membungkus h2 */
+#testimonials {
+    padding: 50px 0;
+    text-align: center; /* Memastikan konten dalam section ini terpusat */
+}
+
+.gallery-background {
+    padding: 20px;
+    background-color: #202020; /* Warna latar belakang jika diinginkan */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar yang sama */
+    gap: 20px; /* Jarak antara card */
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 4, 131, 0.1);
+    background-color: #DAA520;
+}
+
+.card-image {
+    width: 100%;
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+.card:hover .card-image {
+    filter: blur(0);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(109, 109, 109, 0.5);
+    color: white;
+    text-align: left;
+    padding: 2.5em;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+}
+
+#skills {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #202020;
+}
+
+#skills h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #000000;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 27, 0.618);
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+
+
+
+#contact {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.contact-link {
+    color: #DAA520; /* Warna default */
+    font-size: 2em; /* Ukuran ikon */
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ffffff; /* Warna hover, sesuaikan sesuai tema */
+}
+
+
+/* Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
