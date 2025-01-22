@@ -223,13 +223,13 @@ section {
 }
 
 
-.feature-box, .testimonial-box, .media-box {
+.feature-box, .media-box {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.feature, .testimonial, .media {
+.feature, .media {
     background: #000000;
     color: #ffffff;
     border-radius: 8px;
@@ -256,10 +256,6 @@ h2 {
 }
 
 /* Untuk elemen yang membungkus h2 */
-#testimonials {
-    padding: 50px 0;
-    text-align: center; /* Memastikan konten dalam section ini terpusat */
-}
 
 .gallery-background {
     padding: 20px;
