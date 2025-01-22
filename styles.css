@@ -147,7 +147,7 @@ body {
     text-align: center;
 }
 
-.birthday-image {
+.profile-image {
     max-width: 50%; /* Gambar akan disesuaikan dengan ukuran container */
     height: auto;
     border-radius: 50%; /* Membuat gambar menjadi bulat */
@@ -155,7 +155,7 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.birthday-image:hover {
+.profile-image:hover {
     box-shadow: 0 0 15px 6px #ffee23; /* Efek bayangan saat di-hover */
 }
 
