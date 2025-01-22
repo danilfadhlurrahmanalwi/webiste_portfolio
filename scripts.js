@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const elementsToObserve = [
         ...document.querySelectorAll('section'),
         ...document.querySelectorAll('.feature'),
-        ...document.querySelectorAll('.testimonial'),
         ...document.querySelectorAll('.media')
     ];
 
